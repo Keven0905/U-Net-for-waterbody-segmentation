@@ -74,14 +74,24 @@ Computes segmentation metrics (IoU, precision, recall, F-score), generates confu
 Main training script for U-Net segmentation with multi-backbone support, configurable training phases (freeze/unfreeze), and mixed-precision training.
   
    **Model Training Process**
+
+  Before training, it is necessary to download the pre-trained weights first.
+  
+  Link: https://pan.baidu.com/s/1A22fC5cPRb74gqrpq7O9-A
+  
+  Extraction code: 6n2c
+  
+  After the download is completed, put the pre-training weight file into the model_data folder
   
   1.Using the Datasets I provided
+  
   Put the voc dataset I provided into VOCdevkit and run voc_annotation.py.Run train.py for training.
   
   2.Using the Datasets your own
+  
   Firsst,Note to use the VOC format for training.
   Before training, place the label file in the SegmentationClass under the VOC2007 folder in the VOCdevkit folder.
-  Before training, place the image files in JPEGImages under the VOC2007 folder in the VOCdevkit folder.
+  place the image files in JPEGImages under the VOC2007 folder in the VOCdevkit folder.
   Generate the corresponding txt file using the voc_annotation.py file before training.
   Note to modify the num_classes of train.py to the number of categories plus 1.
   You can start training by running train.py.
